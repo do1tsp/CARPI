@@ -7,7 +7,7 @@ Carpi - Anzeigen und Steuern per externer Sensoren / Aktoren
  - Arduinos haben den Namen 'Gateway' 
  - Diese können z.B. sein: Lenkradfernbedienung, Lichtsteuerung per WS2812b, Klemme 15, Klemme S, Auf oder abgeschlossenes Fahrzeug
 
-# Datenstrucktur:
+# Datenstruktur:
  - Daten zu den Gateways findet man im Unterordner Gateways
  - Beispiel datein sind unter DATA Abgespeichert
  
