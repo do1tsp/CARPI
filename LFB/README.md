@@ -9,3 +9,9 @@
 - RIGHT 0xC0 	
 - VOL+ 	0x80 	
 - VOL- 	0x00
+
+# Main.cpp
+- Auslesen des Codes
+
+# Fehlend:
+- Weiterleitung an Pi
