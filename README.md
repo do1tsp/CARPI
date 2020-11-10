@@ -1,5 +1,4 @@
 # CARPI
-CARPI
 
 Carpi - Anzeigen und Steuern per externer Sensoren / Aktoren
 
