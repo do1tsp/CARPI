@@ -1,0 +1,63 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Uhr Head Head Head Head Head Head Head Head Head Head Head Head Head Head"
+    "Spotify Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt"
+    "Funk Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt"
+    "DAB Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt"
+    "Settings Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt"
+    "Cover Media Media Media Media Media Media Media Media Media Media Media Media Media Media";
+}
+
+.Uhr { 
+  grid-area: Uhr; 
+  background-color: black;
+
+}
+.Uhr-inner {
+  color: aqua;
+  text-align: center;
+}
+
+.Spotify { 
+  grid-area: Spotify; 
+  background-color: grey;
+}
+
+.Funk { 
+  grid-area: Funk;
+  background-color: grey;
+}
+
+.DAB { 
+  grid-area: DAB; 
+  background-color: grey;
+}
+
+.Cover { 
+  grid-area: Cover;
+  background-color: grey; 
+  
+}
+
+.Settings { 
+  grid-area: Settings; 
+  background-color: grey;
+}
+.Media {
+  grid-area: Media;
+  background-color: black  ;
+  text-align: center;
+}
+.Head {
+  grid-area: Head;
+  background-color: black;
+
+}
+.Inhalt {
+  grid-area: Inhalt;
+
+}
