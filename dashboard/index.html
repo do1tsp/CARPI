@@ -1,27 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>HTML</title>
-	<link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Radio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-  <div class="grid-container">
-    <div class="Uhr">
-      <div class="Uhr-inner" id="Uhr-Zeit"></div> 
-      <div class="Uhr-inner" id="Uhr-Datum"></div> 
-    </div>
+<body class="d-flex flex-column h-100">
+    
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <div class="navbar-brand" id="zeit"> </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" id="home" onclick="addHome()" >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " id="Spotifynav" onclick="addSpotify()">Spotify</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " id="dabnav" onclick="addDAB()"  >DAB</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " id="Settingsnav" onclick="addSettings()">Settings</a>
+            </li>
+          </ul>
+          <div id="spotify-search">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+ 
+<div class="space-top" id="space-top"></div>
+<div class="innercontainer">
+<div id="Home"></div>
+<div id="Spotify"></div>
+<div id="DAB"></div>
+<div id="Settings"></div>
+</div>
 
-    <div class="Head"></div>
-    <div class="Spotify"><img src="https://img.icons8.com/color/96/000000/spotify--v1.png"style="width: 100px;height: 100px;"/></div>
-    <div class="Funk"><img src="https://img.icons8.com/cotton/64/000000/marine-radio.png"style=" width: 100px;height: 100px;"/></div>
-    <div class="DAB"><img src="https://img.icons8.com/ios-filled/100/000000/radio.png"style="width: 100px;height: 100px;"/> </div>
-    <div class="Cover" id="Cover"></div>
-    <div class="Settings"><img src="https://img.icons8.com/ios-filled/100/000000/settings.png" style="width: 100px;height: 100px;"/></div>
-    <div class="Media"></div>
-    <div class="Inhalt"> Hier Wird je Nach Appauswahl der Inhalt angezeigt</div>
-    </div>
-  </div>
-  <script src="main.js"></script>
+
+<footer class="footer mt-auto py-3 bg-dark">
+    <div class="cover" id="cover"><img src="alt/bild.jpg" style="width: 100px; height: 100px"></div>
+    <div class="media" id="media"> 99 Luftballons - Nena</div>
+    <div class="progressbar"><div class="progress"></div><div class="progress-bar" id="bar"></div></div>
+</footer> 
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <script src="main.js"></script> 
+  <script src="spotify.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

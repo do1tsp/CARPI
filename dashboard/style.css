@@ -1,63 +1,56 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: 100px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
-  grid-template-rows: 100px 100px 100px 100px 100px 100px;
-  gap: 0px 0px;
-  grid-template-areas:
-    "Uhr Head Head Head Head Head Head Head Head Head Head Head Head Head Head"
-    "Spotify Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt"
-    "Funk Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt"
-    "DAB Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt"
-    "Settings Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt Inhalt"
-    "Cover Media Media Media Media Media Media Media Media Media Media Media Media Media Media";
-}
+body {
+    padding: 0;
+    margin: 0;
+    background: #f9f9f9;
+  }
+  /*-- Navigationsleiste --*/
 
-.Uhr { 
-  grid-area: Uhr; 
-  background-color: black;
+  .nav-link,
+  .navbar-brand {
+    color: white;
+    cursor: pointer;
+  }
+  .nav-link {
+    margin-right: 1em !important;
+  }
+  .nav-link:hover,
+  .navbar-brand:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+ 
+main > .container {
+    padding: 160px 15px 0;
+  }
 
-}
-.Uhr-inner {
-  color: aqua;
-  text-align: center;
-}
+  .navbar-brand {
+      text-align: center;
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    line-height: 60px; 
+    background-color: #f5f5f5;
+  }
+ .progress-bar {
+    width: 80%;
 
-.Spotify { 
-  grid-area: Spotify; 
-  background-color: grey;
-}
-
-.Funk { 
-  grid-area: Funk;
-  background-color: grey;
-}
-
-.DAB { 
-  grid-area: DAB; 
-  background-color: grey;
-}
-
-.Cover { 
-  grid-area: Cover;
-  background-color: grey; 
-  
-}
-
-.Settings { 
-  grid-area: Settings; 
-  background-color: grey;
-}
-.Media {
-  grid-area: Media;
-  background-color: black  ;
-  text-align: center;
-}
-.Head {
-  grid-area: Head;
-  background-color: black;
+ }
+.space-top {
+  margin-top: 70px;
 
 }
-.Inhalt {
-  grid-area: Inhalt;
+.innercontainer {
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 250px;
+}
 
+.media {
+  color: white;
 }
