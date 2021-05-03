@@ -1,0 +1,1297 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "832678a6.032868",
+        "type": "subflow",
+        "name": "getMyCurrentPlayingPlaylist",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "32e1e81b.cfbed8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1020,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "fc430697.b8f5b8",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "13013547.45b4eb",
+        "type": "subflow",
+        "name": "getPlaylist?",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "8aa2a054.d55bd"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 560,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "9e34067d.e5da68",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "e5ea3616.bd8bf8",
+        "type": "spotify-auth",
+        "name": "user-read-recently-played",
+        "scope": "user-read-recently-played"
+    },
+    {
+        "id": "896accf6.e4c7f",
+        "type": "spotify-auth",
+        "name": "Spotify OAuth2",
+        "scope": "streaming\nuser-follow-modify\nuser-read-currently-playing\nuser-modify-playback-state"
+    },
+    {
+        "id": "[YOUR CONFIG - SPOTIFY]",
+        "type": "spotify-auth",
+        "name": "Spotify_ext OAuth2",
+        "scope": "user-read-playback-state\nstreaming\nplaylist-read-collaborative\nuser-modify-playback-state\nuser-library-modify\nuser-read-currently-playing\nplaylist-read-private\napp-remote-control\nplaylist-modify-private\nuser-library-read"
+    },
+    {
+        "id": "[YOUR CONFIG]",
+        "type": "mqtt-broker",
+        "name": "test",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "4007f45b.b0a3cc",
+        "type": "ui_tab",
+        "name": "Spotify",
+        "icon": "my_library_music",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "bf18535b.2f5fe",
+        "type": "ui_tab",
+        "name": "Spotify",
+        "icon": "my_library_music",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4c99ccf8.ce4ef4",
+        "type": "ui_group",
+        "name": "Spotify",
+        "tab": "4007f45b.b0a3cc",
+        "order": 1,
+        "disp": false,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "1c452c81.fcf793",
+        "type": "ui_group",
+        "name": "Spotify",
+        "tab": "4007f45b.b0a3cc",
+        "order": 2,
+        "disp": false,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "695f2e42.25305",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD.MM.YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c172018a.6b69",
+        "type": "Cache",
+        "name": "Playlist",
+        "defaultTtl": "",
+        "checkPeriod": ""
+    },
+    {
+        "id": "b12de301.25659",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/progress",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 360,
+        "wires": [
+            [
+                "6b27ebdc.cf5884"
+            ]
+        ]
+    },
+    {
+        "id": "95109781.710b48",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1000,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "3cbc3849.d99ca8",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/zeit",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 100,
+        "wires": [
+            [
+                "932e2a87.7a7038"
+            ]
+        ]
+    },
+    {
+        "id": "37ce1a22.433e66",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/spotify",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a77a9d3.9b3856",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/funk",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97511c37.49733",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/DAB",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a067266.e10f3e",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/play",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 240,
+        "wires": [
+            [
+                "714ea474.01aa7c"
+            ]
+        ]
+    },
+    {
+        "id": "6b0fdf83.e87ea",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/next",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 280,
+        "wires": [
+            [
+                "d91981ee.3f217"
+            ]
+        ]
+    },
+    {
+        "id": "3994e0c1.7ebda",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/pre",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 320,
+        "wires": [
+            [
+                "751ac872.e10b68"
+            ]
+        ]
+    },
+    {
+        "id": "932e2a87.7a7038",
+        "type": "simpletime",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "mydate": false,
+        "myymd": true,
+        "myyear": false,
+        "mymonth": false,
+        "mymonthn": false,
+        "mydom": false,
+        "mydoy": false,
+        "myday": false,
+        "myhourpm": false,
+        "myhour": false,
+        "mytime": true,
+        "mytimes": false,
+        "myminute": false,
+        "myminutes": false,
+        "mysecond": false,
+        "mymillis": false,
+        "myepoch": false,
+        "myrawdate": false,
+        "mypm": false,
+        "x": 250,
+        "y": 100,
+        "wires": [
+            [
+                "c97db876.b20348"
+            ]
+        ]
+    },
+    {
+        "id": "c97db876.b20348",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "func": "msg.payload = {\n  \"datum\": msg.myymd,\n  \"zeit\": msg.mytime\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 100,
+        "wires": [
+            [
+                "95109781.710b48"
+            ]
+        ]
+    },
+    {
+        "id": "d91981ee.3f217",
+        "type": "spotify",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "auth": "896accf6.e4c7f",
+        "api": "skipToNext",
+        "x": 270,
+        "y": 280,
+        "wires": [
+            [
+                "54042d06.836b24"
+            ]
+        ]
+    },
+    {
+        "id": "714ea474.01aa7c",
+        "type": "spotify",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "auth": "896accf6.e4c7f",
+        "api": "getMyCurrentPlayingTrack",
+        "x": 320,
+        "y": 240,
+        "wires": [
+            [
+                "3f060a28.149126"
+            ]
+        ]
+    },
+    {
+        "id": "751ac872.e10b68",
+        "type": "spotify",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "auth": "896accf6.e4c7f",
+        "api": "skipToPrevious",
+        "x": 280,
+        "y": 320,
+        "wires": [
+            [
+                "a45f9833.fd1308"
+            ]
+        ]
+    },
+    {
+        "id": "4cbad851.687d88",
+        "type": "spotify",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "auth": "896accf6.e4c7f",
+        "api": "play",
+        "x": 630,
+        "y": 220,
+        "wires": [
+            [
+                "5814228e.dffebc"
+            ]
+        ]
+    },
+    {
+        "id": "609760b3.0e414",
+        "type": "spotify",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "auth": "896accf6.e4c7f",
+        "api": "pause",
+        "x": 630,
+        "y": 260,
+        "wires": [
+            [
+                "5814228e.dffebc"
+            ]
+        ]
+    },
+    {
+        "id": "54042d06.836b24",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1000,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a45f9833.fd1308",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1000,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "5814228e.dffebc",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1000,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "3f060a28.149126",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "msg.payload.is_playing",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 510,
+        "y": 240,
+        "wires": [
+            [
+                "4cbad851.687d88"
+            ],
+            [
+                "609760b3.0e414"
+            ]
+        ]
+    },
+    {
+        "id": "dff04742.8ae428",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Spotify Kontrolle",
+        "info": "# Spotify Controll\n",
+        "x": 100,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "da622892.17f118",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Noch nicht implementiert ",
+        "info": "",
+        "x": 130,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "6b27ebdc.cf5884",
+        "type": "spotify",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "auth": "896accf6.e4c7f",
+        "api": "getMyCurrentPlayingTrack",
+        "x": 320,
+        "y": 360,
+        "wires": [
+            [
+                "41723389.178a8c"
+            ]
+        ]
+    },
+    {
+        "id": "f3afc361.14ef8",
+        "type": "rpi-gpio in",
+        "z": "f6f2187d.f17ca8",
+        "name": "Klemme 15",
+        "pin": "7",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "x": 90,
+        "y": 720,
+        "wires": [
+            [
+                "23076a9f.1f6916",
+                "d43dc38c.6f048"
+            ]
+        ]
+    },
+    {
+        "id": "d43dc38c.6f048",
+        "type": "rpi-gpio out",
+        "z": "f6f2187d.f17ca8",
+        "name": "Display",
+        "pin": "29",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 280,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "23076a9f.1f6916",
+        "type": "rpi-gpio out",
+        "z": "f6f2187d.f17ca8",
+        "name": "Verstärker",
+        "pin": "31",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 290,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "1102b822.f297c8",
+        "type": "rpi-gpio in",
+        "z": "f6f2187d.f17ca8",
+        "name": "Tür Links",
+        "pin": "33",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "x": 80,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6238ba52.e7d404",
+        "type": "rpi-gpio in",
+        "z": "f6f2187d.f17ca8",
+        "name": "Tür Rechts",
+        "pin": "36",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "x": 80,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "77ad980d.3b2068",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Spannungsversorgung",
+        "info": "",
+        "x": 120,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "9c4e8140.6fe4d",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Licht",
+        "info": "",
+        "x": 70,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "7df954b7.1708dc",
+        "type": "exec",
+        "z": "f6f2187d.f17ca8",
+        "command": "vcgencmd display_power 1",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 540,
+        "y": 760,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "62784ac6.4c5074",
+        "type": "exec",
+        "z": "f6f2187d.f17ca8",
+        "command": "vcgencmd display_power 0",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 540,
+        "y": 700,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1c55d0d4.98c55f",
+        "type": "spotify",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "auth": "896accf6.e4c7f",
+        "api": "getMyCurrentPlayingTrack",
+        "x": 320,
+        "y": 400,
+        "wires": [
+            [
+                "21a2e4d7.0ae1bc"
+            ]
+        ]
+    },
+    {
+        "id": "41723389.178a8c",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "func": "msg.payload = msg.payload.progress_ms; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 360,
+        "wires": [
+            [
+                "1f874f90.de17e"
+            ]
+        ]
+    },
+    {
+        "id": "1f874f90.de17e",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1000,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "2c91cb6f.8ec074",
+        "type": "spotify",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "auth": "896accf6.e4c7f",
+        "api": "getMyCurrentPlayingTrack",
+        "x": 320,
+        "y": 440,
+        "wires": [
+            [
+                "4db54582.c3116c"
+            ]
+        ]
+    },
+    {
+        "id": "40943b24.0cc354",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/duration",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 400,
+        "wires": [
+            [
+                "1c55d0d4.98c55f"
+            ]
+        ]
+    },
+    {
+        "id": "21a2e4d7.0ae1bc",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "func": "msg.payload = msg.payload.item.duration_ms\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 400,
+        "wires": [
+            [
+                "a003df8c.455e6"
+            ]
+        ]
+    },
+    {
+        "id": "a003df8c.455e6",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1000,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "5664e077.0a87e",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/track",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 440,
+        "wires": [
+            [
+                "2c91cb6f.8ec074"
+            ]
+        ]
+    },
+    {
+        "id": "4db54582.c3116c",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "func": "msg.payload = msg.payload.item.name + ' - ' + msg.payload.item.artists[0].name; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 440,
+        "wires": [
+            [
+                "89ac2f84.bafb"
+            ]
+        ]
+    },
+    {
+        "id": "89ac2f84.bafb",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1000,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "760f839d.5305dc",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/cover",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 480,
+        "wires": [
+            [
+                "a4f2fb7a.015258"
+            ]
+        ]
+    },
+    {
+        "id": "583010f4.04ea7",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "func": "msg.payload = msg.payload.item.album.images[1].url;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 480,
+        "wires": [
+            [
+                "22cd181a.c26bd8"
+            ]
+        ]
+    },
+    {
+        "id": "22cd181a.c26bd8",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1000,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "a4f2fb7a.015258",
+        "type": "spotify",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "auth": "896accf6.e4c7f",
+        "api": "getMyCurrentPlayingTrack",
+        "x": 320,
+        "y": 480,
+        "wires": [
+            [
+                "583010f4.04ea7"
+            ]
+        ]
+    },
+    {
+        "id": "ca3c3933.c61548",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 1220,
+        "wires": [
+            [
+                "e38b4b50.f8e888"
+            ]
+        ]
+    },
+    {
+        "id": "e7a79703.cb1308",
+        "type": "spotify",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "auth": "896accf6.e4c7f",
+        "api": "getTrack",
+        "x": 380,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e38b4b50.f8e888",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "func": "msg.params = [\n    '6uGQKWdjmKvgH1QdDCcM8N', /* Artist ID */\n    { limit: 10, offset: 20 } /* Options */\n];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 1220,
+        "wires": [
+            [
+                "e7a79703.cb1308"
+            ]
+        ]
+    },
+    {
+        "id": "12c5f673.0f535a",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 1260,
+        "wires": [
+            [
+                "b76be5e.0da0f18"
+            ]
+        ]
+    },
+    {
+        "id": "cef3386e.b06888",
+        "type": "spotify",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "auth": "896accf6.e4c7f",
+        "api": "getTrack",
+        "x": 380,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b76be5e.0da0f18",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "func": "msg.params = [\n    '6uGQKWdjmKvgH1QdDCcM8N', /* Artist ID */\n    { limit: 10, offset: 20 } /* Options */\n];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 1260,
+        "wires": [
+            [
+                "cef3386e.b06888"
+            ]
+        ]
+    },
+    {
+        "id": "4ddb26e8.c873b8",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/getPlaylist",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 520,
+        "wires": [
+            [
+                "c0f7feae.ff21"
+            ]
+        ]
+    },
+    {
+        "id": "19e0b5a6.0884aa",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1000,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "32e1e81b.cfbed8",
+        "type": "spotify",
+        "z": "832678a6.032868",
+        "name": "",
+        "auth": "896accf6.e4c7f",
+        "api": "getMyCurrentPlayingTrack",
+        "x": 220,
+        "y": 60,
+        "wires": [
+            [
+                "a8a11633.251ba8"
+            ]
+        ]
+    },
+    {
+        "id": "a8a11633.251ba8",
+        "type": "function",
+        "z": "832678a6.032868",
+        "name": "",
+        "func": "msg.params = [\n    msg.payload.context.uri.substr(17,30)\n];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 60,
+        "wires": [
+            [
+                "1f38d70b.d18f79"
+            ]
+        ]
+    },
+    {
+        "id": "1f38d70b.d18f79",
+        "type": "spotify",
+        "z": "832678a6.032868",
+        "name": "",
+        "auth": "896accf6.e4c7f",
+        "api": "getPlaylist",
+        "x": 630,
+        "y": 60,
+        "wires": [
+            [
+                "fc430697.b8f5b8"
+            ]
+        ]
+    },
+    {
+        "id": "fc430697.b8f5b8",
+        "type": "function",
+        "z": "832678a6.032868",
+        "name": "",
+        "func": "msg.payload = msg.payload.tracks.items;\nmsg.topic = \"playlist\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a8528ae3.0d1328",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/getPlaylist2",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 600,
+        "wires": [
+            [
+                "30b1819a.77b27e"
+            ]
+        ]
+    },
+    {
+        "id": "add04cc1.302e9",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1000,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "8afab242.8015f",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Zeit",
+        "info": "\n",
+        "x": 70,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8aa2a054.d55bd",
+        "type": "function",
+        "z": "13013547.45b4eb",
+        "name": "",
+        "func": "msg.params = [msg.req.originalUrl.substr(14,30)];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 40,
+        "wires": [
+            [
+                "2a54f164.6d1a7e"
+            ]
+        ]
+    },
+    {
+        "id": "2a54f164.6d1a7e",
+        "type": "spotify",
+        "z": "13013547.45b4eb",
+        "name": "",
+        "auth": "896accf6.e4c7f",
+        "api": "getPlaylist",
+        "x": 310,
+        "y": 40,
+        "wires": [
+            [
+                "9e34067d.e5da68"
+            ]
+        ]
+    },
+    {
+        "id": "9e34067d.e5da68",
+        "type": "function",
+        "z": "13013547.45b4eb",
+        "name": "",
+        "func": "msg.payload = msg.payload.tracks.items\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "30b1819a.77b27e",
+        "type": "subflow:13013547.45b4eb",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "x": 270,
+        "y": 600,
+        "wires": [
+            [
+                "add04cc1.302e9"
+            ]
+        ]
+    },
+    {
+        "id": "c0f7feae.ff21",
+        "type": "subflow:832678a6.032868",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "x": 390,
+        "y": 520,
+        "wires": [
+            [
+                "19e0b5a6.0884aa"
+            ]
+        ]
+    }
+]
