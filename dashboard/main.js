@@ -4,17 +4,31 @@ function httpGet(theUrl) {
   xmlHttpReq.send(null);
   return xmlHttpReq.responseText;
   } 
+  window.onload = addHome();
 function Clear() {
   document.getElementById("Home").innerHTML = "";
   document.getElementById("Spotify").innerHTML = "";
   document.getElementById("DAB").innerHTML = "";
   document.getElementById("Settings").innerHTML = "";
+  
+  if (document.getElementById("home").classList[1] = 'active') {
+      document.getElementById("home").classList.remove("active");
+  } 
+  if (document.getElementById("Spotifynav").classList[1] = 'active') {
+    document.getElementById("Spotifynav").classList.remove("active");
+  } 
+  if (document.getElementById("dabnav").classList[1] = 'active') {
+  document.getElementById("dabnav").classList.remove("active");
+  }
+  if (document.getElementById("Settingsnav").classList[1] = 'active') {
+    document.getElementById("Settingsnav").classList.remove("active");
+  }  
 }
 
 function addHome() {
   Clear();
-  document.getElementById("Home").innerHTML = "Hallo";
-  document.getElementById("Home").classList.add("active");
+  document.getElementById("home").innerHTML = "Hallo";
+  document.getElementById("home").classList.add("active");
  }
  
 function addSpotify() {
